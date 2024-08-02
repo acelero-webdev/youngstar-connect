@@ -1,0 +1,2375 @@
+<style type="text/css">
+    .subheadp {
+        font-size: 20px !important;
+        font-weight: normal !important;
+    }
+    a:link,
+    a:visited {
+        color: #c9336d;
+    }
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .column {
+        flex: 1;
+        padding: 20px 10px 20px 0;
+    }
+    .statewide {
+        margin: 0 0 15px 0;
+        padding: 0;
+        color: #c9336d !important;
+        font-size: 1.5rem;
+    }
+    .ilocation {
+        font-family: 'myriad-pro', sans-serif;
+        padding-bottom: 10px;
+    }
+    .infowindowcontent {
+        display: none;
+        font-family: 'myriad-pro', sans-serif;
+    }
+    #map {
+        width: 90%;
+        margin: 5% 0;
+        height: 40vw;
+    }
+
+    @media screen and (max-width: 768px) {
+        .column-1 {
+            flex: 1;
+            order: 2;
+        }
+        .column-2 {
+            flex: 2;
+            order: 1;
+        }
+        .column {
+            flex: 100%;
+            padding: 20px;
+        }
+        #map {
+            height: 80vw;
+        }
+    }
+</style>
+
+<div
+    class="container-full homepage_top subpage_top"
+    style="background-color: #ccc">
+    <div class="container">
+        <div class="row row-50-50">
+            <div>
+                <h1 style="color: #000">Locations</h1>
+                <p class="subheadp">
+                    The YoungStar Connect team is here for you! In addition to
+                    providing local supports across Wisconsin, we have offices
+                    in each YoungStar region, which feature space for providers
+                    to drop off contracts and other paperwork, attend trainings,
+                    meet with coaches, and more.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="column column-1">
+        <p>
+            Find your Local YoungStar Office by selecting the county or tribe
+            where your program is located:
+        </p>
+        <form
+            action="/"
+            id="c1"
+            method="POST"
+            name="c1"
+            onsubmit=""
+            target="adams">
+            <select
+                id="c2"
+                name="c2"
+                size="1">
+                <option
+                    selected="selected"
+                    value="#empty">
+                    Select County
+                </option>
+                <option value="#adamscontent">Adams County</option>
+                <option value="#ashlandcontent">Ashland County</option>
+                <option value="#badrivercontent">Bad River Tribe</option>
+                <option value="#barroncontent">Barron County</option>
+                <option value="#bayfieldcontent">Bayfield County</option>
+                <option value="#browncontent">Brown County</option>
+                <option value="#buffalocontent">Buffalo County</option>
+                <option value="#burnettcontent">Burnett County</option>
+                <option value="#calumetcontent">Calumet County</option>
+                <option value="#chippewacontent">Chippewa County</option>
+                <option value="#clarkcontent">Clark County</option>
+                <option value="#columbiacontent">Columbia County</option>
+                <option value="#crawfordcontent">Crawford County</option>
+                <option value="#danecontent">Dane County</option>
+                <option value="#dodgecontent">Dodge County</option>
+                <option value="#doorcontent">Door County</option>
+                <option value="#douglascontent">Douglas County</option>
+                <option value="#dunncontent">Dunn County</option>
+                <option value="#eauclairecontent">Eau Claire County</option>
+                <option value="#florencecontent">Florence County</option>
+                <option value="#fonddulaccontent">Fond du Lac County</option>
+                <option value="#forestcontent">Forest County</option>
+                <option value="#potawatomicontent">
+                    Forest County Potawatomi Tribe
+                </option>
+                <option value="#grantcontent">Grant County</option>
+                <option value="#greencontent">Green County</option>
+                <option value="#greenlakecontent">Green Lake County</option>
+                <option value="#hochunknorthcontent">
+                    Ho-Chunk Northern Region
+                </option>
+                <option value="#hochunknortheastcontent">
+                    Ho-Chunk Northeastern Region
+                </option>
+                <option value="#hochunkwestcontent">
+                    Ho-Chunk Western Region
+                </option>
+                <option value="#hochunksouthcontent">
+                    Ho-Chunk Southern Region
+                </option>
+                <option value="#hochunksoutheastcontent">
+                    Ho-Chunk Southeastern Region
+                </option>
+                <option value="#iowacontent">Iowa County</option>
+                <option value="#ironcontent">Iron County</option>
+                <option value="#jacksoncontent">Jackson County</option>
+                <option value="#jeffersoncontent">Jefferson County</option>
+                <option value="#juneaucontent">Juneau County</option>
+                <option value="#kenoshacontent">Kenosha County</option>
+                <option value="#kewauneecontent">Kewaunee County</option>
+                <option value="#laccourteoreillecontent">
+                    Lac Courte Oreille Tribe
+                </option>
+                <option value="#lacduflambeaucontent">
+                    Lac Du Flambeau Tribe
+                </option>
+                <option value="#lacrossecontent">La Crosse County</option>
+                <option value="#lafayettecontent">Lafayette County</option>
+                <option value="#langladecontent">Langlade County</option>
+                <option value="#lincolncontent">Lincoln County</option>
+                <option value="#manitowoccontent">Manitowoc County</option>
+                <option value="#marathoncontent">Marathon County</option>
+                <option value="#marinettecontent">Marinette County</option>
+                <option value="#marquettecontent">Marquette County</option>
+                <option value="#menomineecontent">Menominee County</option>
+                <option value="#menomineetribecontent">Menominee Tribe</option>
+                <option value="#milwaukeecontent">Milwaukee County</option>
+                <option value="#monroecontent">Monroe County</option>
+                <option value="#ocontocontent">Oconto County</option>
+                <option value="#oneidacontent">Oneida County</option>
+                <option value="#oneidatribecontent">Oneida Tribe</option>
+                <option value="#outagamiecontent">Outagamie County</option>
+                <option value="#ozaukeecontent">Ozaukee County</option>
+                <option value="#pepincontent">Pepin County</option>
+                <option value="#piercecontent">Pierce County</option>
+                <option value="#polkcontent">Polk County</option>
+                <option value="#portagecontent">Portage County</option>
+                <option value="#pricecontent">Price County</option>
+                <option value="#racinecontent">Racine County</option>
+                <option value="#redcliffcontent">Red Cliff Tribe</option>
+                <option value="#richlandcontent">Richland County</option>
+                <option value="#rockcontent">Rock County</option>
+                <option value="#ruskcontent">Rusk County</option>
+                <option value="#stcroixcontent">St. Croix County</option>
+                <option value="#saukcontent">Sauk County</option>
+                <option value="#sawyercontent">Sawyer County</option>
+                <option value="#shawanocontent">Shawano County</option>
+                <option value="#sheboygancontent">Sheboygan County</option>
+                <option value="#sokaogoncontent">Sokaogon Tribe</option>
+                <option value="#munseecontent">Stockbridge Munsee Tribe</option>
+                <option value="#taylorcontent">Taylor County</option>
+                <option value="#trempealeaucontent">Trempealeau County</option>
+                <option value="#vernoncontent">Vernon County</option>
+                <option value="#vilascontent">Vilas County</option>
+                <option value="#walworthcontent">Walworth County</option>
+                <option value="#washburncontent">Washburn County</option>
+                <option value="#washingtoncontent">Washington County</option>
+                <option value="#waukeshacontent">Waukesha County</option>
+                <option value="#waupacacontent">Waupaca County</option>
+                <option value="#wausharacontent">Waushara County</option>
+                <option value="#winnebagocontent">Winnebago County</option>
+                <option value="#woodcontent">Wood County</option>
+            </select>
+            <input
+                onclick="[c2.selectedIndex].value"
+                type="button"
+                value="Go" />
+        </form>
+
+        <div
+            class="infowindowcontent"
+            id="milwaukeecontent">
+            <h2>Milwaukee</h2>
+            <p>
+                Southeastern Region YoungStar Office<br />
+                1433 North Water Street, Suite 400<br />
+                Milwaukee, WI 53202<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.414.312.5888<br />
+                Hours: Tue. 8:30 a.m. - 2 p.m., Wed. 8:30 a.m. - 2 p.m., Thu.
+                8:30 a.m. - 1:30 p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="kenoshacontent">
+            <h2>Kenosha</h2>
+            <p>
+                Southeastern Region YoungStar Office<br />
+                1433 North Water Street, Suite 400<br />
+                Milwaukee, WI 53202<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.414.312.5888<br />
+                Hours: Tue. 8:30 a.m. - 2 p.m., Wed. 8:30 a.m. - 2 p.m., Thu.
+                8:30 a.m. - 1:30 p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="racinecontent">
+            <h2>Racine</h2>
+            <p>
+                Southeastern Region YoungStar Office<br />
+                1433 North Water Street, Suite 400<br />
+                Milwaukee, WI 53202<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.414.312.5888<br />
+                Hours: Tue. 8:30 a.m. - 2 p.m., Wed. 8:30 a.m. - 2 p.m., Thu.
+                8:30 a.m. - 1:30 p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="browncontent">
+            <h2>Brown</h2>
+            <p>
+                Northeastern Region YoungStar Office<br />
+                532 W. College Ave., Suite 102<br />
+                Appleton, WI 54911<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.920.644.5356<br />
+                Hours: Tue. 9 a.m. - 1 p.m., Wed. 7:30 a.m. - 3:30 p.m., Thu. 9
+                a.m. - 1 p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="calumetcontent">
+            <h2>Calumet</h2>
+            <p>
+                Northeastern Region YoungStar Office<br />
+                532 W. College Ave., Suite 102<br />
+                Appleton, WI 54911<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.920.644.5356<br />
+                Hours: Tue. 9 a.m. - 1 p.m., Wed. 7:30 a.m. - 3:30 p.m., Thu. 9
+                a.m. - 1 p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="doorcontent">
+            <h2>Door</h2>
+            <p>
+                Northeastern Region YoungStar Office<br />
+                532 W. College Ave., Suite 102<br />
+                Appleton, WI 54911<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.920.644.5356<br />
+                Hours: Tue. 9 a.m. - 1 p.m., Wed. 7:30 a.m. - 3:30 p.m., Thu. 9
+                a.m. - 1 p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="fonddulaccontent">
+            <h2>Fond du Lac</h2>
+            <p>
+                Northeastern Region YoungStar Office<br />
+                532 W. College Ave., Suite 102<br />
+                Appleton, WI 54911<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.920.644.5356<br />
+                Hours: Tue. 9 a.m. - 1 p.m., Wed. 7:30 a.m. - 3:30 p.m., Thu. 9
+                a.m. - 1 p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="greenlakecontent">
+            <h2>Green Lake</h2>
+            <p>
+                Northeastern Region YoungStar Office<br />
+                532 W. College Ave., Suite 102<br />
+                Appleton, WI 54911<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.920.644.5356<br />
+                Hours: Tue. 9 a.m. - 1 p.m., Wed. 7:30 a.m. - 3:30 p.m., Thu. 9
+                a.m. - 1 p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="kewauneecontent">
+            <h2>Kewaunee</h2>
+            <p>
+                Northeastern Region YoungStar Office<br />
+                532 W. College Ave., Suite 102<br />
+                Appleton, WI 54911<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.920.644.5356<br />
+                Hours: Tue. 9 a.m. - 1 p.m., Wed. 7:30 a.m. - 3:30 p.m., Thu. 9
+                a.m. - 1 p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="manitowoccontent">
+            <h2>Manitowoc</h2>
+            <p>
+                Northeastern Region YoungStar Office<br />
+                532 W. College Ave., Suite 102<br />
+                Appleton, WI 54911<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.920.644.5356<br />
+                Hours: Tue. 9 a.m. - 1 p.m., Wed. 7:30 a.m. - 3:30 p.m., Thu. 9
+                a.m. - 1 p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="marinettecontent">
+            <h2>Marinette</h2>
+            <p>
+                Northeastern Region YoungStar Office<br />
+                532 W. College Ave., Suite 102<br />
+                Appleton, WI 54911<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.920.644.5356<br />
+                Hours: Tue. 9 a.m. - 1 p.m., Wed. 7:30 a.m. - 3:30 p.m., Thu. 9
+                a.m. - 1 p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="menomineecontent">
+            <h2>Menominee</h2>
+            <p>
+                Northeastern Region YoungStar Office<br />
+                532 W. College Ave., Suite 102<br />
+                Appleton, WI 54911<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.920.644.5356<br />
+                Hours: Tue. 9 a.m. - 1 p.m., Wed. 7:30 a.m. - 3:30 p.m., Thu. 9
+                a.m. - 1 p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="menomineetribecontent">
+            <h2>Menominee Tribe</h2>
+            <p>
+                Northeastern Region YoungStar Office<br />
+                532 W. College Ave., Suite 102<br />
+                Appleton, WI 54911<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.920.644.5356<br />
+                Hours: Tue. 9 a.m. - 1 p.m., Wed. 7:30 a.m. - 3:30 p.m., Thu. 9
+                a.m. - 1 p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="ocontocontent">
+            <h2>Oconto</h2>
+            <p>
+                Northeastern Region YoungStar Office<br />
+                532 W. College Ave., Suite 102<br />
+                Appleton, WI 54911<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.920.644.5356<br />
+                Hours: Tue. 9 a.m. - 1 p.m., Wed. 7:30 a.m. - 3:30 p.m., Thu. 9
+                a.m. - 1 p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="oneidatribecontent">
+            <h2>Oneida Tribe</h2>
+            <p>
+                Northeastern Region YoungStar Office<br />
+                532 W. College Ave., Suite 102<br />
+                Appleton, WI 54911<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.920.644.5356<br />
+                Hours: Tue. 9 a.m. - 1 p.m., Wed. 7:30 a.m. - 3:30 p.m., Thu. 9
+                a.m. - 1 p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="outagamiecontent">
+            <h2>Outagamie</h2>
+            <p>
+                Northeastern Region YoungStar Office<br />
+                532 W. College Ave., Suite 102<br />
+                Appleton, WI 54911<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.920.644.5356<br />
+                Hours: Tue. 9 a.m. - 1 p.m., Wed. 7:30 a.m. - 3:30 p.m., Thu. 9
+                a.m. - 1 p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="ozaukeecontent">
+            <h2>Ozaukee</h2>
+            <p>
+                Northeastern Region YoungStar Office<br />
+                532 W. College Ave., Suite 102<br />
+                Appleton, WI 54911<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.920.644.5356<br />
+                Hours: Tue. 9 a.m. - 1 p.m., Wed. 7:30 a.m. - 3:30 p.m., Thu. 9
+                a.m. - 1 p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="sheboygancontent">
+            <h2>Sheboygan</h2>
+            <p>
+                Northeastern Region YoungStar Office<br />
+                532 W. College Ave., Suite 102<br />
+                Appleton, WI 54911<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.920.644.5356<br />
+                Hours: Tue. 9 a.m. - 1 p.m., Wed. 7:30 a.m. - 3:30 p.m., Thu. 9
+                a.m. - 1 p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="shawanocontent">
+            <h2>Shawano</h2>
+            <p>
+                Northeastern Region YoungStar Office<br />
+                532 W. College Ave., Suite 102<br />
+                Appleton, WI 54911<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.920.644.5356<br />
+                Hours: Tue. 9 a.m. - 1 p.m., Wed. 7:30 a.m. - 3:30 p.m., Thu. 9
+                a.m. - 1 p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="munseecontent">
+            <h2>Stockbridge Munsee</h2>
+            <p>
+                Northeastern Region YoungStar Office<br />
+                532 W. College Ave., Suite 102<br />
+                Appleton, WI 54911<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.920.644.5356<br />
+                Hours: Tue. 9 a.m. - 1 p.m., Wed. 7:30 a.m. - 3:30 p.m., Thu. 9
+                a.m. - 1 p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="washingtoncontent">
+            <h2>Washington</h2>
+            <p>
+                Northeastern Region YoungStar Office<br />
+                532 W. College Ave., Suite 102<br />
+                Appleton, WI 54911<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.920.644.5356<br />
+                Hours: Tue. 9 a.m. - 1 p.m., Wed. 7:30 a.m. - 3:30 p.m., Thu. 9
+                a.m. - 1 p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="waupacacontent">
+            <h2>Waupaca</h2>
+            <p>
+                Northeastern Region YoungStar Office<br />
+                532 W. College Ave., Suite 102<br />
+                Appleton, WI 54911<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.920.644.5356<br />
+                Hours: Tue. 9 a.m. - 1 p.m., Wed. 7:30 a.m. - 3:30 p.m., Thu. 9
+                a.m. - 1 p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="marquettecontent">
+            <h2>Marquette</h2>
+            <p>
+                Northeastern Region YoungStar Office<br />
+                532 W. College Ave., Suite 102<br />
+                Appleton, WI 54911<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.920.644.5356<br />
+                Hours: Tue. 9 a.m. - 1 p.m., Wed. 7:30 a.m. - 3:30 p.m., Thu. 9
+                a.m. - 1 p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="wausharacontent">
+            <h2>Waushara</h2>
+            <p>
+                Northeastern Region YoungStar Office<br />
+                532 W. College Ave., Suite 102<br />
+                Appleton, WI 54911<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.920.644.5356<br />
+                Hours: Tue. 9 a.m. - 1 p.m., Wed. 7:30 a.m. - 3:30 p.m., Thu. 9
+                a.m. - 1 p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="winnebagocontent">
+            <h2>Winnebago</h2>
+            <p>
+                Northeastern Region YoungStar Office<br />
+                532 W. College Ave., Suite 102<br />
+                Appleton, WI 54911<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.920.644.5356<br />
+                Hours: Tue. 9 a.m. - 1 p.m., Wed. 7:30 a.m. - 3:30 p.m., Thu. 9
+                a.m. - 1 p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="adamscontent">
+            <h2>Adams</h2>
+            <p>
+                Southern Region YoungStar Office<br />
+                2908 Marketplace Drive, Suite 103<br />
+                Fitchburg, WI 53719<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.608.690.3025<br />
+                Hours | Mon: 8 a.m. &ndash; 12 p.m. | Tue: 12 p.m. &ndash; 5
+                p.m. | Wed: 9 a.m. &ndash; 12 p.m. | Thu: 12:30 p.m. &ndash; 5
+                p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="columbiacontent">
+            <h2>Columbia</h2>
+            <p>
+                Southern Region YoungStar Office<br />
+                2908 Marketplace Drive, Suite 103<br />
+                Fitchburg, WI 53719<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.608.690.3025<br />
+                Hours | Mon: 8 a.m. &ndash; 12 p.m. | Tue: 12 p.m. &ndash; 5
+                p.m. | Wed: 9 a.m. &ndash; 12 p.m. | Thu: 12:30 p.m. &ndash; 5
+                p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="crawfordcontent">
+            <h2>Crawford</h2>
+            <p>
+                Southern Region YoungStar Office<br />
+                2908 Marketplace Drive, Suite 103<br />
+                Fitchburg, WI 53719<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.608.690.3025<br />
+                Hours | Mon: 8 a.m. &ndash; 12 p.m. | Tue: 12 p.m. &ndash; 5
+                p.m. | Wed: 9 a.m. &ndash; 12 p.m. | Thu: 12:30 p.m. &ndash; 5
+                p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="danecontent">
+            <h2>Dane</h2>
+            <p>
+                Southern Region YoungStar Office<br />
+                2908 Marketplace Drive, Suite 103<br />
+                Fitchburg, WI 53719<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.608.690.3025<br />
+                Hours | Mon: 8 a.m. &ndash; 12 p.m. | Tue: 12 p.m. &ndash; 5
+                p.m. | Wed: 9 a.m. &ndash; 12 p.m. | Thu: 12:30 p.m. &ndash; 5
+                p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="dodgecontent">
+            <h2>Dodge</h2>
+            <p>
+                Southern Region YoungStar Office<br />
+                2908 Marketplace Drive, Suite 103<br />
+                Fitchburg, WI 53719<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.608.690.3025<br />
+                Hours | Mon: 8 a.m. &ndash; 12 p.m. | Tue: 12 p.m. &ndash; 5
+                p.m. | Wed: 9 a.m. &ndash; 12 p.m. | Thu: 12:30 p.m. &ndash; 5
+                p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="grantcontent">
+            <h2>Grant</h2>
+            <p>
+                Southern Region YoungStar Office<br />
+                2908 Marketplace Drive, Suite 103<br />
+                Fitchburg, WI 53719<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.608.690.3025<br />
+                Hours | Mon: 8 a.m. &ndash; 12 p.m. | Tue: 12 p.m. &ndash; 5
+                p.m. | Wed: 9 a.m. &ndash; 12 p.m. | Thu: 12:30 p.m. &ndash; 5
+                p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="greencontent">
+            <h2>Green</h2>
+            <p>
+                Southern Region YoungStar Office<br />
+                2908 Marketplace Drive, Suite 103<br />
+                Fitchburg, WI 53719<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.608.690.3025<br />
+                Hours | Mon: 8 a.m. &ndash; 12 p.m. | Tue: 12 p.m. &ndash; 5
+                p.m. | Wed: 9 a.m. &ndash; 12 p.m. | Thu: 12:30 p.m. &ndash; 5
+                p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="iowacontent">
+            <h2>Iowa</h2>
+            <p>
+                Southern Region YoungStar Office<br />
+                2908 Marketplace Drive, Suite 103<br />
+                Fitchburg, WI 53719<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.608.690.3025<br />
+                Hours | Mon: 8 a.m. &ndash; 12 p.m. | Tue: 12 p.m. &ndash; 5
+                p.m. | Wed: 9 a.m. &ndash; 12 p.m. | Thu: 12:30 p.m. &ndash; 5
+                p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="jeffersoncontent">
+            <h2>Jefferson</h2>
+            <p>
+                Southern Region YoungStar Office<br />
+                2908 Marketplace Drive, Suite 103<br />
+                Fitchburg, WI 53719<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.608.690.3025<br />
+                Hours | Mon: 8 a.m. &ndash; 12 p.m. | Tue: 12 p.m. &ndash; 5
+                p.m. | Wed: 9 a.m. &ndash; 12 p.m. | Thu: 12:30 p.m. &ndash; 5
+                p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="juneaucontent">
+            <h2>Juneau</h2>
+            <p>
+                Southern Region YoungStar Office<br />
+                2908 Marketplace Drive, Suite 103<br />
+                Fitchburg, WI 53719<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.608.690.3025<br />
+                Hours | Mon: 8 a.m. &ndash; 12 p.m. | Tue: 12 p.m. &ndash; 5
+                p.m. | Wed: 9 a.m. &ndash; 12 p.m. | Thu: 12:30 p.m. &ndash; 5
+                p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="lafayettecontent">
+            <h2>Lafayette</h2>
+            <p>
+                Southern Region YoungStar Office<br />
+                2908 Marketplace Drive, Suite 103<br />
+                Fitchburg, WI 53719<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.608.690.3025<br />
+                Hours | Mon: 8 a.m. &ndash; 12 p.m. | Tue: 12 p.m. &ndash; 5
+                p.m. | Wed: 9 a.m. &ndash; 12 p.m. | Thu: 12:30 p.m. &ndash; 5
+                p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="richlandcontent">
+            <h2>Richland</h2>
+            <p>
+                Southern Region YoungStar Office<br />
+                2908 Marketplace Drive, Suite 103<br />
+                Fitchburg, WI 53719<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.608.690.3025<br />
+                Hours | Mon: 8 a.m. &ndash; 12 p.m. | Tue: 12 p.m. &ndash; 5
+                p.m. | Wed: 9 a.m. &ndash; 12 p.m. | Thu: 12:30 p.m. &ndash; 5
+                p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="rockcontent">
+            <h2>Rock</h2>
+            <p>
+                Southern Region YoungStar Office<br />
+                2908 Marketplace Drive, Suite 103<br />
+                Fitchburg, WI 53719<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.608.690.3025<br />
+                Hours | Mon: 8 a.m. &ndash; 12 p.m. | Tue: 12 p.m. &ndash; 5
+                p.m. | Wed: 9 a.m. &ndash; 12 p.m. | Thu: 12:30 p.m. &ndash; 5
+                p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="saukcontent">
+            <h2>Sauk</h2>
+            <p>
+                Southern Region YoungStar Office<br />
+                2908 Marketplace Drive, Suite 103<br />
+                Fitchburg, WI 53719<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.608.690.3025<br />
+                Hours | Mon: 8 a.m. &ndash; 12 p.m. | Tue: 12 p.m. &ndash; 5
+                p.m. | Wed: 9 a.m. &ndash; 12 p.m. | Thu: 12:30 p.m. &ndash; 5
+                p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="walworthcontent">
+            <h2>Walworth</h2>
+            <p>
+                Southern Region YoungStar Office<br />
+                2908 Marketplace Drive, Suite 103<br />
+                Fitchburg, WI 53719<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.608.690.3025<br />
+                Hours | Mon: 8 a.m. &ndash; 12 p.m. | Tue: 12 p.m. &ndash; 5
+                p.m. | Wed: 9 a.m. &ndash; 12 p.m. | Thu: 12:30 p.m. &ndash; 5
+                p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="waukeshacontent">
+            <h2>Waukesha</h2>
+            <p>
+                Southeastern Region YoungStar Office<br />
+                1433 North Water Street, Suite 400<br />
+                Milwaukee, WI 53202<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.414.312.5888<br />
+                Hours: Tue. 8:30 a.m. - 2 p.m., Wed. 8:30 a.m. - 2 p.m., Thu.
+                8:30 a.m. - 1:30 p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="ashlandcontent">
+            <h2>Ashland</h2>
+            <p>
+                Northern Region YoungStar Office<br />
+                221 South First Street<br />
+                Eagle River, WI 54521<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.888.653.2351<br />
+                Hours: Tue. 8:30 a.m. - 4:30 p.m., Thu. 8:30 a.m. - 4:30 p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="badrivercontent">
+            <h2>Bad River</h2>
+            <p>
+                Northern Region YoungStar Office<br />
+                221 South First Street<br />
+                Eagle River, WI 54521<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.888.653.2351<br />
+                Hours: Tue. 8:30 a.m. - 4:30 p.m., Thu. 8:30 a.m. - 4:30 p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="bayfieldcontent">
+            <h2>Bayfield</h2>
+            <p>
+                Northern Region YoungStar Office<br />
+                221 South First Street<br />
+                Eagle River, WI 54521<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.888.653.2351<br />
+                Hours: Tue. 8:30 a.m. - 4:30 p.m., Thu. 8:30 a.m. - 4:30 p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="florencecontent">
+            <h2>Florence</h2>
+            <p>
+                Northern Region YoungStar Office<br />
+                221 South First Street<br />
+                Eagle River, WI 54521<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.888.653.2351<br />
+                Hours: Tue. 8:30 a.m. - 4:30 p.m., Thu. 8:30 a.m. - 4:30 p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="forestcontent">
+            <h2>Forest</h2>
+            <p>
+                Northern Region YoungStar Office<br />
+                221 South First Street<br />
+                Eagle River, WI 54521<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.888.653.2351<br />
+                Hours: Tue. 8:30 a.m. - 4:30 p.m., Thu. 8:30 a.m. - 4:30 p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="hochunknorthcontent">
+            <h2>Ho-Chunk Northern Region</h2>
+            <p>
+                Northern Region YoungStar Office<br />
+                221 South First Street<br />
+                Eagle River, WI 54521<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.888.653.2351<br />
+                Hours: Tue. 8:30 a.m. - 4:30 p.m., Thu. 8:30 a.m. - 4:30 p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="hochunknortheastcontent">
+            <h2>Ho-Chunk Northeastern Region</h2>
+            <p>
+                Northeastern Region YoungStar Office<br />
+                532 W. College Ave., Suite 102<br />
+                Appleton, WI 54911<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.920.644.5356<br />
+                Hours: Tue. 9 a.m. - 1 p.m., Wed. 7:30 a.m. - 3:30 p.m., Thu. 9
+                a.m. - 1 p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="hochunkwestcontent">
+            <h2>Ho-Chunk Western Region</h2>
+            <p>
+                Western Region YoungStar Office<br />
+                505 S Dewey Street, Suite 208<br />
+                Eau Claire, WI 54701<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.888.585.5958<br />
+                Hours: Tue. 8 a.m. - 4 p.m., Thu. 8 a.m. - 4 p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="hochunksouthcontent">
+            <h2>Ho-Chunk Southern Region</h2>
+            <p>
+                Southern Region YoungStar Office<br />
+                2908 Marketplace Drive, Suite 103<br />
+                Fitchburg, WI 53719<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.608.690.3025<br />
+                Hours | Mon: 8 a.m. &ndash; 12 p.m. | Tue: 12 p.m. &ndash; 5
+                p.m. | Wed: 9 a.m. &ndash; 12 p.m. | Thu: 12:30 p.m. &ndash; 5
+                p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="hochunksoutheastcontent">
+            <h2>Ho-Chunk Southeastern Region</h2>
+            <p>
+                Southeastern Region YoungStar Office<br />
+                1433 North Water Street, Suite 400<br />
+                Milwaukee, WI 53202<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.414.312.5888<br />
+                Hours: Tue. 8:30 a.m. - 2 p.m., Wed. 8:30 a.m. - 2 p.m., Thu.
+                8:30 a.m. - 1:30 p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="ironcontent">
+            <h2>Iron</h2>
+            <p>
+                Northern Region YoungStar Office<br />
+                221 South First Street<br />
+                Eagle River, WI 54521<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.888.653.2351<br />
+                Hours: Tue. 8:30 a.m. - 4:30 p.m., Thu. 8:30 a.m. - 4:30 p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="laccourteoreillecontent">
+            <h2>Lac Courte Oreille</h2>
+            <p>
+                Northern Region YoungStar Office<br />
+                221 South First Street<br />
+                Eagle River, WI 54521<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.888.653.2351<br />
+                Hours: Tue. 8:30 a.m. - 4:30 p.m., Thu. 8:30 a.m. - 4:30 p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="lacduflambeaucontent">
+            <h2>Lac du Flambeau</h2>
+            <p>
+                Northern Region YoungStar Office<br />
+                221 South First Street<br />
+                Eagle River, WI 54521<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+        </div>
+        <div
+            class="infowindowcontent"
+            id="langladecontent">
+            <h2>Langlade</h2>
+            <p>
+                Northern Region YoungStar Office<br />
+                221 South First Street<br />
+                Eagle River, WI 54521<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+        </div>
+        <div
+            class="infowindowcontent"
+            id="lincolncontent">
+            <h2>Lincoln</h2>
+            <p>
+                Northern Region YoungStar Office<br />
+                221 South First Street<br />
+                Eagle River, WI 54521<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.888.653.2351<br />
+                Hours: Tue. 8:30 a.m. - 4:30 p.m., Thu. 8:30 a.m. - 4:30 p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="marathoncontent">
+            <h2>Marathon</h2>
+            <p>
+                Northern Region YoungStar Office<br />
+                221 South First Street<br />
+                Eagle River, WI 54521<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.888.653.2351<br />
+                Hours: Tue. 8:30 a.m. - 4:30 p.m., Thu. 8:30 a.m. - 4:30 p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="oneidacontent">
+            <h2>Oneida</h2>
+            <p>
+                Northern Region YoungStar Office<br />
+                221 South First Street<br />
+                Eagle River, WI 54521<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.888.653.2351<br />
+                Hours: Tue. 8:30 a.m. - 4:30 p.m., Thu. 8:30 a.m. - 4:30 p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="portagecontent">
+            <h2>Portage</h2>
+            <p>
+                Northern Region YoungStar Office<br />
+                221 South First Street<br />
+                Eagle River, WI 54521<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.888.653.2351<br />
+                Hours: Tue. 8:30 a.m. - 4:30 p.m., Thu. 8:30 a.m. - 4:30 p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="potawatomicontent">
+            <h2>Forest County Potawatomi</h2>
+            <p>
+                Northern Region YoungStar Office<br />
+                221 South First Street<br />
+                Eagle River, WI 54521<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.888.653.2351<br />
+                Hours: Tue. 8:30 a.m. - 4:30 p.m., Thu. 8:30 a.m. - 4:30 p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="pricecontent">
+            <h2>Price</h2>
+            <p>
+                Northern Region YoungStar Office<br />
+                221 South First Street<br />
+                Eagle River, WI 54521<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.888.653.2351<br />
+                Hours: Tue. 8:30 a.m. - 4:30 p.m., Thu. 8:30 a.m. - 4:30 p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="redcliffcontent">
+            <h2>Red Cliff</h2>
+            <p>
+                Northern Region YoungStar Office<br />
+                221 South First Street<br />
+                Eagle River, WI 54521<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.888.653.2351<br />
+                Hours: Tue. 8:30 a.m. - 4:30 p.m., Thu. 8:30 a.m. - 4:30 p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="sawyercontent">
+            <h2>Sawyer</h2>
+            <p>
+                Northern Region YoungStar Office<br />
+                221 South First Street<br />
+                Eagle River, WI 54521<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.888.653.2351<br />
+                Hours: Tue. 8:30 a.m. - 4:30 p.m., Thu. 8:30 a.m. - 4:30 p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="sokaogoncontent">
+            <h2>Sokaogon</h2>
+            <p>
+                Northern Region YoungStar Office<br />
+                221 South First Street<br />
+                Eagle River, WI 54521<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.888.653.2351<br />
+                Hours: Tue. 8:30 a.m. - 4:30 p.m., Thu. 8:30 a.m. - 4:30 p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="taylorcontent">
+            <h2>Taylor</h2>
+            <p>
+                Northern Region YoungStar Office<br />
+                221 South First Street<br />
+                Eagle River, WI 54521<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.888.653.2351<br />
+                Hours: Tue. 8:30 a.m. - 4:30 p.m., Thu. 8:30 a.m. - 4:30 p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="vilascontent">
+            <h2>Vilas</h2>
+            <p>
+                Northern Region YoungStar Office<br />
+                221 South First Street<br />
+                Eagle River, WI 54521<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.888.653.2351<br />
+                Hours: Tue. 8:30 a.m. - 4:30 p.m., Thu. 8:30 a.m. - 4:30 p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="woodcontent">
+            <h2>Wood</h2>
+            <p>
+                Northern Region YoungStar Office<br />
+                221 South First Street<br />
+                Eagle River, WI 54521<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.888.653.2351<br />
+                Hours: Tue. 8:30 a.m. - 4:30 p.m., Thu. 8:30 a.m. - 4:30 p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="barroncontent">
+            <h2>Barron</h2>
+            <p>
+                Western Region YoungStar Office<br />
+                505 S Dewey Street, Suite 208<br />
+                Eau Claire, WI 54701<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.888.585.5958<br />
+                Hours: Tue. 8 a.m. - 4 p.m., Thu. 8 a.m. - 4 p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="buffalocontent">
+            <h2>Buffalo</h2>
+            <p>
+                Western Region YoungStar Office<br />
+                505 S Dewey Street, Suite 208<br />
+                Eau Claire, WI 54701<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.888.585.5958<br />
+                Hours: Tue. 8 a.m. - 4 p.m., Thu. 8 a.m. - 4 p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="burnettcontent">
+            <h2>Burnett</h2>
+            <p>
+                Western Region YoungStar Office<br />
+                505 S Dewey Street, Suite 208<br />
+                Eau Claire, WI 54701<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+        </div>
+        <div
+            class="infowindowcontent"
+            id="chippewacontent">
+            <h2>Chippewa</h2>
+            <p>
+                Western Region YoungStar Office<br />
+                505 S Dewey Street, Suite 208<br />
+                Eau Claire, WI 54701<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.888.585.5958<br />
+                Hours: Tue. 8 a.m. - 4 p.m., Thu. 8 a.m. - 4 p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="clarkcontent">
+            <h2>Clark</h2>
+            <p>
+                Western Region YoungStar Office<br />
+                505 S Dewey Street, Suite 208<br />
+                Eau Claire, WI 54701<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.888.585.5958<br />
+                Hours: Tue. 8 a.m. - 4 p.m., Thu. 8 a.m. - 4 p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="douglascontent">
+            <h2>Douglas</h2>
+            <p>
+                Western Region YoungStar Office<br />
+                505 S Dewey Street, Suite 208<br />
+                Eau Claire, WI 54701<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.888.585.5958<br />
+                Hours: Tue. 8 a.m. - 4 p.m., Thu. 8 a.m. - 4 p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="dunncontent">
+            <h2>Dunn</h2>
+            <p>
+                Western Region YoungStar Office<br />
+                505 S Dewey Street, Suite 208<br />
+                Eau Claire, WI 54701<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.888.585.5958<br />
+                Hours: Tue. 8 a.m. - 4 p.m., Thu. 8 a.m. - 4 p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="eauclairecontent">
+            <h2>Eau Claire</h2>
+            <p>
+                Western Region YoungStar Office<br />
+                505 S Dewey Street, Suite 208<br />
+                Eau Claire, WI 54701<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.888.585.5958<br />
+                Hours: Tue. 8 a.m. - 4 p.m., Thu. 8 a.m. - 4 p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="jacksoncontent">
+            <h2>Jackson</h2>
+            <p>
+                Western Region YoungStar Office<br />
+                505 S Dewey Street, Suite 208<br />
+                Eau Claire, WI 54701<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.888.585.5958<br />
+                Hours: Tue. 8 a.m. - 4 p.m., Thu. 8 a.m. - 4 p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="lacrossecontent">
+            <h2>LaCrosse</h2>
+            <p>
+                Western Region YoungStar Office<br />
+                505 S Dewey Street, Suite 208<br />
+                Eau Claire, WI 54701<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.888.585.5958<br />
+                Hours: Tue. 8 a.m. - 4 p.m., Thu. 8 a.m. - 4 p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="monroecontent">
+            <h2>Monroe</h2>
+            <p>
+                Western Region YoungStar Office<br />
+                505 S Dewey Street, Suite 208<br />
+                Eau Claire, WI 54701<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.888.585.5958<br />
+                Hours: Tue. 8 a.m. - 4 p.m., Thu. 8 a.m. - 4 p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="pepincontent">
+            <h2>Pepin</h2>
+            <p>
+                Western Region YoungStar Office<br />
+                505 S Dewey Street, Suite 208<br />
+                Eau Claire, WI 54701<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.888.585.5958<br />
+                Hours: Tue. 8 a.m. - 4 p.m., Thu. 8 a.m. - 4 p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="piercecontent">
+            <h2>Pierce</h2>
+            <p>
+                Western Region YoungStar Office<br />
+                505 S Dewey Street, Suite 208<br />
+                Eau Claire, WI 54701<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.888.585.5958<br />
+                Hours: Tue. 8 a.m. - 4 p.m., Thu. 8 a.m. - 4 p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="polkcontent">
+            <h2>Polk</h2>
+            <p>
+                Western Region YoungStar Office<br />
+                505 S Dewey Street, Suite 208<br />
+                Eau Claire, WI 54701<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.888.585.5958<br />
+                Hours: Tue. 8 a.m. - 4 p.m., Thu. 8 a.m. - 4 p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="ruskcontent">
+            <h2>Rusk</h2>
+            <p>
+                Western Region YoungStar Office<br />
+                505 S Dewey Street, Suite 208<br />
+                Eau Claire, WI 54701<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.888.585.5958<br />
+                Hours: Tue. 8 a.m. - 4 p.m., Thu. 8 a.m. - 4 p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="stcroixcontent">
+            <h2>St. Croix</h2>
+            <p>
+                Western Region YoungStar Office<br />
+                505 S Dewey Street, Suite 208<br />
+                Eau Claire, WI 54701<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.888.585.5958<br />
+                Hours: Tue. 8 a.m. - 4 p.m., Thu. 8 a.m. - 4 p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="trempealeaucontent">
+            <h2>Trempealeau</h2>
+            <p>
+                Western Region YoungStar Office<br />
+                505 S Dewey Street, Suite 208<br />
+                Eau Claire, WI 54701<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.888.585.5958<br />
+                Hours: Tue. 8 a.m. - 4 p.m., Thu. 8 a.m. - 4 p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="vernoncontent">
+            <h2>Vernon</h2>
+            <p>
+                Western Region YoungStar Office<br />
+                505 S Dewey Street, Suite 208<br />
+                Eau Claire, WI 54701<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+        </div>
+        <div
+            class="infowindowcontent"
+            id="washburncontent">
+            <h2>Washburn</h2>
+            <p>
+                Western Region YoungStar Office<br />
+                505 S Dewey Street, Suite 208<br />
+                Eau Claire, WI 54701<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.888.585.5958<br />
+                Hours: Tue. 8 a.m. - 4 p.m., Thu. 8 a.m. - 4 p.m.
+            </p>
+        </div>
+
+        <!--infowindowcontent class is used to hide these divs, they are used for the map infowindow content and need unique ids used in the map js-->
+        <div
+            class="infowindowcontent"
+            id="westernregioncontent">
+            <h2>Western Region YoungStar Office</h2>
+            <p>
+                For Barron, Buffalo, Burnett, Chippewa, Clark, Douglas, Dunn,
+                Eau Claire, Jackson, Lacrosse, Monroe, Pepin, Pierce, Polk,
+                Rusk, St. Croix, Trempealeau, Vernon, Washburn - Tribes:
+                Ho-Chunk
+            </p>
+            <p>
+                505 S Dewey Street, Suite 208<br />
+                Eau Claire, WI 54701<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.888.585.5958<br />
+                Hours: Tue. 8 a.m. - 4 p.m., Thu. 8 a.m. - 4 p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="northernregioncontent">
+            <h2>Northern Region YoungStar Office</h2>
+            <p>
+                For Ashland, Bayfield, Florence, Forest, Iron, Langlade,
+                Lincoln, Marathon, Oneida, Portage, Price, Sawyer, Taylor,
+                Vilas, Wood - Tribes: Bad River, Forest County Potawatomi,
+                Ho-Chunk, Lac Courte Oreille, Lac du Flambeau, Red Cliff, and
+                Sokaogon
+            </p>
+            <p>
+                221 South First Street<br />
+                Eagle River, WI 54521<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.888.653.2351<br />
+                Hours: Tue. 8:30 a.m. - 4:30 p.m., Thu. 8:30 a.m. - 4:30 p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="northeasternregioncontent">
+            <h2>Northeastern Region YoungStar Office</h2>
+            <p>
+                For Brown, Calumet, Door, Fond du Lac, Green Lake, Kewaunee,
+                Manitowoc, Marinette, Marquette, Menominee, Oconto, Outagamie,
+                Ozaukee, Shawano, Sheboygan, Washington, Waupaca, Waushara,
+                Winnebago - Tribes: Ho-Chunk, Menominee, Oneida, and
+                Stockbridge-Munsee
+            </p>
+            <p>
+                532 W. College Ave., Suite 102<br />
+                Appleton, WI 54911<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.920.644.5356<br />
+                Hours: Tue. 9 a.m. - 1 p.m., Wed. 7:30 a.m. - 3:30 p.m., Thu. 9
+                a.m. - 1 p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="southernregioncontent">
+            <h2>Southern Region YoungStar Office</h2>
+            <p>
+                For Adams, Columbia, Crawford, Dane, Dodge, Grant, Green, Iowa,
+                Jefferson, Juneau, Lafayette, Richland, Rock, Sauk, Walworth -
+                Tribes: Ho-Chunk
+            </p>
+            <p>
+                2908 Marketplace Drive, Suite 103<br />
+                Fitchburg, WI 53719<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.608.690.3025<br />
+                Hours | Mon: 8 a.m. &ndash; 12 p.m. | Tue: 12 p.m. &ndash; 5
+                p.m. | Wed: 9 a.m. &ndash; 12 p.m. | Thu: 12:30 p.m. &ndash; 5
+                p.m.
+            </p>
+        </div>
+
+        <div
+            class="infowindowcontent"
+            id="southeasternregioncontent">
+            <h2>Southeastern Region YoungStar Office</h2>
+            <p>For Kenosha, Milwaukee, Racine, and Waukesha Counties</p>
+            <p>
+                1433 North Water Street, Suite 400<br />
+                Milwaukee, WI 53202<br />
+                Email:
+                <a href="mailto:help@youngstarconnect.com"
+                    >help@youngstarconnect.com</a
+                >
+            </p>
+            <p>
+                Phone: 1.414.312.5888<br />
+                Hours: Tue. 8:30 a.m. - 2 p.m., Wed. 8:30 a.m. - 2 p.m., Thu.
+                8:30 a.m. - 1:30 p.m.
+            </p>
+        </div>
+
+        <div id="map">&nbsp;</div>
+    </div>
+
+    <div class="column column-2">
+        <p>Looking to connect? You can find our contact information below.</p>
+        <h3 class="statewide">
+            Statewide phone number :
+            <a href="tel:18339647827">1-833-YNG-STAR (964-7827)</a>
+        </h3>
+
+        <div class="ilocation">
+            <strong>Northern Region YoungStar Office &mdash; Eagle River</strong
+            ><br />
+            221 South First Street<br />
+            Eagle River, WI 54521<br />
+            Hours | Tue: 8:30 a.m. &ndash; 4:30 p.m. | Thu: 8:30 a.m. &ndash;
+            4:30 p.m.<br />
+            P: <a href="tel:1-888-653-2351">1-888-653-2351</a><br />
+            E:
+            <a href="mailto:help@youngstarconnect.com"
+                >help@youngstarconnect.com</a
+            >
+        </div>
+
+        <div class="ilocation">
+            <strong
+                >Northeastern Region YoungStar Office &mdash; Appleton</strong
+            ><br />
+            532 W. College Ave., Suite 102<br />
+            Appleton, WI 54911<br />
+            Hours: Tue. 9 a.m. - 1 p.m., Wed. 7:30 a.m. - 3:30 p.m., Thu. 9 a.m.
+            - 1 p.m.<br />
+            P: <a href="tel:1-920-644-5356">1-920-644-5356</a><br />
+            E:
+            <a href="mailto:help@youngstarconnect.com"
+                >help@youngstarconnect.com</a
+            >
+        </div>
+
+        <div class="ilocation">
+            <strong
+                >Southeastern Region YoungStar Office &mdash; Milwaukee</strong
+            ><br />
+            1433 N. Water St., Suite 400<br />
+            Milwaukee, WI 53202<br />
+            Hours | Tue: 8:30 a.m. &ndash; 2 p.m. | Wed: 8:30 a.m. &ndash; 2
+            p.m. | Thu: 8:30 a.m. &ndash; 1:30 p.m.<br />
+            P: <a href="tel:1-414-312-5888">1-414-312-5888</a><br />
+            E:
+            <a href="mailto:help@youngstarconnect.com"
+                >help@youngstarconnect.com</a
+            >
+        </div>
+
+        <div class="ilocation">
+            <strong>Southern Region YoungStar Office &mdash; Madison</strong
+            ><br />
+            2908 Marketplace Dr., Suite 103<br />
+            Fitchburg, WI 53719<br />
+            Hours | Mon: 8 a.m. &ndash; 12 p.m. | Tue: 12 p.m. &ndash; 5 p.m. |
+            Wed: 9 a.m. &ndash; 12 p.m. | Thu: 12:30 p.m. &ndash; 5 p.m.<br />
+            P: <a href="tel:1-608-690-3025">1-608-690-3025</a><br />
+            E:
+            <a href="mailto:help@youngstarconnect.com"
+                >help@youngstarconnect.com</a
+            >
+        </div>
+
+        <div class="ilocation">
+            <strong>Western Region YoungStar Office &mdash; Eau Claire</strong
+            ><br />
+            505 S. Dewey St., Suite 208<br />
+            Eau Claire, WI 54701<br />
+            Hours | Tue: 8 a.m. &ndash; 4 p.m. | Thu: 8 a.m. &ndash; 4 p.m.<br />
+            P: <a href="tel:1-888-585-5958">1-888-585-5958</a><br />
+            E:
+            <a href="mailto:help@youngstarconnect.com"
+                >help@youngstarconnect.com</a
+            >
+        </div>
+    </div>
+</div>
+
+<script src="https://www.youngstarconnect.com/wp-content/themes/youngstar-child/jquery.min.2.1.4.js"></script>
+<script>
+    function initMap() {
+        var map;
+        map = new google.maps.Map(document.getElementById('map'), {
+            center: { lat: 44.75, lng: -89.5 },
+            zoom: 7,
+        });
+        //global county array
+        var counties = [];
+        var markers = {};
+        //county template
+        var county = function (countyjson) {
+            this.name = countyjson.attributes.COUNTY_NAM;
+            this.geometry = countyjson.geometry.rings;
+            this.MapPolygons = [];
+        };
+        var infowindow = new google.maps.InfoWindow({
+            content: '',
+        });
+        // Markers
+        markers['westernregion'] = new google.maps.Marker({
+            position: { lat: 44.8103959, lng: -91.4976599 },
+            map: map,
+            title: 'Western Region YoungStar Office',
+        });
+        markers['northernregion'] = new google.maps.Marker({
+            position: { lat: 45.6377467, lng: -89.4142635 },
+            map: map,
+            title: 'Northern Region YoungStar Office',
+        });
+        markers['northeasternregion'] = new google.maps.Marker({
+            position: { lat: 44.262148, lng: -88.415784 },
+            map: map,
+            title: 'Northeastern Region YoungStar Office',
+        });
+        markers['southeasternregion'] = new google.maps.Marker({
+            position: { lat: 43.0352274, lng: -87.9102858 },
+            map: map,
+            title: 'Southeastern Region YoungStar Office',
+        });
+        markers['southernregion'] = new google.maps.Marker({
+            position: { lat: 43.0090194, lng: -89.4610905 },
+            map: map,
+            title: 'Southern Region YoungStar Office',
+        });
+        // Listeners
+        markers['northernregion'].addListener('click', function (event) {
+            infowindow.setContent($('#northernregioncontent').html());
+            infowindow.open(map, markers['northernregion']);
+        });
+        markers['westernregion'].addListener('click', function (event) {
+            infowindow.setContent($('#westernregioncontent').html());
+            infowindow.open(map, markers['westernregion']);
+        });
+        markers['northeasternregion'].addListener('click', function (event) {
+            infowindow.setContent($('#northeasternregioncontent').html());
+            infowindow.open(map, markers['northeasternregion']);
+        });
+        markers['southeasternregion'].addListener('click', function (event) {
+            infowindow.setContent($('#southeasternregioncontent').html());
+            infowindow.open(map, markers['southeasternregion']);
+        });
+        markers['southernregion'].addListener('click', function (event) {
+            infowindow.setContent($('#southernregioncontent').html());
+            infowindow.open(map, markers['southernregion']);
+        });
+        //create the moving marker and infowindow
+        var movingmarker = new google.maps.Marker({
+            position: { lat: 0, lng: 0 },
+        });
+        var infowindow = new google.maps.InfoWindow({
+            content: '',
+        });
+        $.getJSON(
+            'https://www.youngstarconnect.com/wp-content/themes/youngstar-child/wi_counties_geographic.json',
+            function (countydata) {
+                //define the counties
+                var countiesjson = countydata.features;
+                for (var x = 0; x < countiesjson.length; x++) {
+                    counties.push(new county(countiesjson[x]));
+                }
+                //define the regions
+                var westregioncounties = [
+                    'Douglas',
+                    'Washburn',
+                    'Burnett',
+                    'Polk',
+                    'Barron',
+                    'Rusk',
+                    'Saint Croix',
+                    'Dunn',
+                    'Chippewa',
+                    'Pierce',
+                    'Pepin',
+                    'Eau Claire',
+                    'Clark',
+                    'Buffalo',
+                    'Trempealeau',
+                    'Vernon',
+                    'Jackson',
+                    'La Crosse',
+                    'Monroe',
+                ];
+                var northregioncounties = [
+                    'Bayfield',
+                    'Ashland',
+                    'Sawyer',
+                    'Iron',
+                    'Vilas',
+                    'Forest',
+                    'Florence',
+                    'Oneida',
+                    'Price',
+                    'Taylor',
+                    'Lincoln',
+                    'Langlade',
+                    'Marathon',
+                    'Wood',
+                    'Portage',
+                ];
+                var northeastregioncounties = [
+                    'Marinette',
+                    'Oconto',
+                    'Shawano',
+                    'Waupaca',
+                    'Menominee',
+                    'Outagamie',
+                    'Brown',
+                    'Kewaunee',
+                    'Door',
+                    'Manitowoc',
+                    'Washington',
+                    'Ozaukee',
+                    'Calumet',
+                    'Winnebago',
+                    'Waushara',
+                    'Marquette',
+                    'Green Lake',
+                    'Fond du Lac',
+                    'Sheboygan',
+                ];
+                var southregioncounties = [
+                    'Adams',
+                    'Juneau',
+                    'Crawford',
+                    'Richland',
+                    'Sauk',
+                    'Columbia',
+                    'Dodge',
+                    'Dane',
+                    'Iowa',
+                    'Grant',
+                    'Walworth',
+                    'Jefferson',
+                    'Lafayette',
+                    'Green',
+                    'Rock',
+                ];
+                var southeastregioncounties = [
+                    'Kenosha',
+                    'Racine',
+                    'Milwaukee',
+                    'Waukesha',
+                ];
+                /*  var milwaukeeregioncounties = ["Milwaukee"];*/
+                for (var x = 0; x < counties.length; x++) {
+                    //define region colors for each region
+                    var color = '#000000';
+                    if ($.inArray(counties[x].name, westregioncounties) != -1) {
+                        color = '#31D9F7';
+                    } else if (
+                    /* else if ($.inArray(counties[x].name, milwaukeeregioncounties) != -1) { 
+                      color = "#FFFF66";
+                    }*/
+                        $.inArray(counties[x].name, northregioncounties) != -1
+                    ) {
+                        color = '#7058F8';
+                    } else if (
+                        $.inArray(counties[x].name, northeastregioncounties) !=
+                        -1
+                    ) {
+                        color = '#F6A627';
+                    } else if (
+                        $.inArray(counties[x].name, southregioncounties) != -1
+                    ) {
+                        color = '#F96C8D';
+                    } else if (
+                        $.inArray(counties[x].name, southeastregioncounties) !=
+                        -1
+                    ) {
+                        color = '#3BF756';
+                    } else {
+                        console.log(
+                            'county ' + counties[x].name + ' not in a region.'
+                        );
+                    }
+                    //create the polygons and add them to the map
+                    for (var z = 0; z < counties[x].geometry.length; z++) {
+                        var coords = counties[x].geometry[z];
+                        var latlngs = [];
+                        for (var y = 0; y < coords.length; y++) {
+                            latlngs.push({
+                                lat: coords[y][1],
+                                lng: coords[y][0],
+                            });
+                        }
+                        counties[x].MapPolygons.push(
+                            new google.maps.Polygon({
+                                paths: latlngs,
+                                strokeColor: color,
+                                strokeOpacity: 0.8,
+                                strokeWeight: 2,
+                                fillColor: color,
+                                fillOpacity: 0.35,
+                                map: map,
+                                countynum: x,
+                            })
+                        );
+                        //Add the listener
+                        counties[x].MapPolygons[z].addListener(
+                            'click',
+                            function (event) {
+                                //move the marker
+                                //movingmarker.setMap(map);
+                                //movingmarker.setPosition(event.latLng);
+                                //change the infowindows content to match the appropriate region
+                                if (
+                                    $.inArray(
+                                        counties[this.countynum].name,
+                                        westregioncounties
+                                    ) != -1
+                                ) {
+                                    //infowindow.setContent($("#westregioncontent").html());
+                                } else if (
+                                    $.inArray(
+                                        counties[this.countynum].name,
+                                        northregioncounties
+                                    ) != -1
+                                ) {
+                                    //infowindow.setContent($("#northregioncontent").html());
+                                } else if (
+                                /* else if ($.inArray(counties[this.countynum].name, milwaukeeregioncounties) != -1) {
+                          //infowindow.setContent($("#milwaukeeregioncontent").html());
+                        }*/
+                                    $.inArray(
+                                        counties[this.countynum].name,
+                                        northeastregioncounties
+                                    ) != -1
+                                ) {
+                                    //infowindow.setContent($("#northeastregioncontent").html());
+                                } else if (
+                                    $.inArray(
+                                        counties[this.countynum].name,
+                                        southregioncounties
+                                    ) != -1
+                                ) {
+                                    //infowindow.setContent($("#southregioncontent").html());
+                                } else if (
+                                    $.inArray(
+                                        counties[this.countynum].name,
+                                        southeastregioncounties
+                                    ) != -1
+                                ) {
+                                    //infowindow.setContent($("#southeastregioncontent").html());
+                                } else {
+                                    //infowindow.setContent("Not a valid region");
+                                }
+                                //open the infowindow
+                                //infowindow.open(map, movingmarker);
+                            }
+                        );
+                    }
+                }
+            }
+        );
+    }
+
+    (function ($) {
+        $('#c2').change(function () {
+            var item = $(this).val();
+            $('.infowindowcontent').hide();
+            $(item).fadeIn();
+        });
+    })(jQuery);
+</script>
+
+<script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmjXk3mUscQ0FMeJsHE1unPbdzDAE_C04&amp;callback=initMap"
+    async
+    defer></script>
